@@ -10,8 +10,10 @@
         <img src="" alt="">
         <div >
             <?php
-            $usuario = $_POST['Login'];
-            $senha = $_POST['senha'];
+            setcookie("usuario",$_POST['Login'],time()+3600);
+            setcookie("senha", $_POST['senha'], time()+3600);
+            $usuario = $_COOKIE["usuario"];
+            $senha = $_COOKIE['senha'];
             if ($usuario == "etec" && $senha == "etec"){
                 echo '<form action="texto.php" method="get">
                 <label for="text">Titulo:</label><br>
@@ -31,12 +33,7 @@
             }
             ?>
             
-        </div>
-        <!-- <form action="texto.php" method="get">
-            <input type="text" name="dfdf" id="">
-            <input type="submit" value="dsfs">
-        </form> -->
-        
+        </div>        
     </body>
     </html>
     

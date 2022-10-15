@@ -16,5 +16,8 @@
             <input type="submit" value="entrar">
         </form>
     </div>
+    <?php
+    
+    ?>
 </body>
 </html>
